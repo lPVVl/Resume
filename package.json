@@ -26,7 +26,8 @@
   ],
   "dependencies": {
     "jpegtran-bin": "^4.0.0",
-    "optipng-bin": "^6.0.0"
+    "optipng-bin": "^6.0.0",
+    "static-server": "^2.2.1"
   },
   "description": ""
 }

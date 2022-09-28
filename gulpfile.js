@@ -1,6 +1,6 @@
 const gulp        = require('gulp');
 const browserSync = require('browser-sync');
-const sass        = require('gulp-sass');
+const sass        = require('gulp-sass')
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
@@ -62,12 +62,16 @@ gulp.task('icons', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src("src/img/**/*")
+    return gulp.src("src/img/**/*.+(jpg|png|jpeg)")
         .pipe(imagemin())
         .pipe(gulp.dest("dist/img"))
         .pipe(browserSync.stream());
 });
 
+gulp.task('svg', function() {
+    return gulp.src("src/img/**/*.+(svg|ico)")
+        .pipe(gulp.dest("dist/img"))
+        .pipe(browserSync.stream());
+});
 
-
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'svg'));

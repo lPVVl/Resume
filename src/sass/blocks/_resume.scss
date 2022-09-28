@@ -1,25 +1,14 @@
 .resume {
-    padding-top: 120px;
-    background-color: #e3ab52;
-    &__title {
-        z-index: 2;
-        position: relative;
-        text-align: center;
-        @include before_circle;
-        &:before {
-            top: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    &__subtitle {
-        text-align: center;
-    }
+    padding-bottom:60px;
+    background-color: #776953;
     &__wrapper {
-        padding: 60px 65px 0 65px;
+        padding: 0px 65px 0 65px;
         display: grid;
-        grid-template-columns: repeat(2, 425px);
-        column-gap: 135px;
+        justify-items: center
+    }
+    &__min {
+        width: 25px;
+        height: 25px;
     }
     &__column {
         &-title {
@@ -37,7 +26,7 @@
                 transform: translateY(-50%);
             }
         }
-        ul {
+        /* ul {
             list-style-type: none;
             li {
                 position: relative;
@@ -51,7 +40,7 @@
                     background-color: #000;
                 }
             }
-        }
+        } */
     }
     &__item {
         position: relative;
@@ -61,18 +50,13 @@
             width: 45px;
             position: absolute;
             top: 68px;
-            background-color:#000;
         }
         &-head {
             position: relative;
-            padding: 45px 0 0 100px;
+            padding: 23px 0 0 100px;
             h4 {
                 margin-bottom: 0;
             }
-        }
-        &-body {
-            padding-left: 43px;
-            margin-top: 12px;
         }
         &-icon {
             z-index: 2;
@@ -85,7 +69,7 @@
             }
         }
         &-location {
-            font-size: 12px;
+            font-size: 15px;
             line-height: 18px;
             margin-top: 5px;
         }

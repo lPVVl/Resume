@@ -1,0 +1,34 @@
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+.header-list {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    border-bottom: 1px solid #ffffff;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 13px 32px;
+    &__item {
+        list-style: none;
+    }
+    &__link {
+            color: #fafafa;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: .4s ease;
+        &:hover {
+            color: rgb(173, 106, 106);
+            font-size: 18px;
+        }
+        &:active {
+            color: red
+        }
+    }
+}
+
